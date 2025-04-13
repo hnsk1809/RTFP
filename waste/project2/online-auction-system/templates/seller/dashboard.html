@@ -1,0 +1,38 @@
+{% extends 'common/base.html' %}
+
+{% block title %}Seller Dashboard - GadgetAuction{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/seller.css') }}">
+{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Seller Dashboard</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('add_gadget') }}">Add Gadget</a></li>
+            <li><a href="{{ url_for('index') }}">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container seller-dashboard">
+    <section>
+        <h2>Welcome, Seller!</h2>
+        <p>Use the dashboard to manage your gadget listings and view bid activity.</p>
+    </section>
+
+    <section>
+        <h3>Your Listed Gadgets</h3>
+        <div id="listed-gadgets">
+            <p>You haven’t added any gadgets yet. <a href="{{ url_for('add_gadget') }}">Add one now.</a></p>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/seller.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}

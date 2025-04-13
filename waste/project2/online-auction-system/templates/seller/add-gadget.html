@@ -1,0 +1,73 @@
+{% extends 'common/base.html' %}
+
+{% block title %}Seller - Add Gadget{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/seller.css') }}">
+{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Add Gadget for Auction</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('seller_dashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('index') }}">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <form id="add-gadget-form">
+        <div class="form-group">
+            <label for="gadget-name">Gadget Name:</label>
+            <input type="text" id="gadget-name" name="gadget-name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="gadget-images">Gadget Images:</label>
+            <input type="file" id="gadget-images" name="gadget-images" multiple>
+        </div>
+
+        <div class="form-group">
+            <label for="gadget-features">Features:</label>
+            <textarea id="gadget-features" name="gadget-features" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="gadget-age">Gadget Age (in months):</label>
+            <input type="number" id="gadget-age" name="gadget-age" min="0">
+        </div>
+
+        <div class="form-group">
+            <label for="gadget-status">Gadget Status:</label>
+            <select id="gadget-status" name="gadget-status">
+                <option value="working">Working</option>
+                <option value="not-working">Not Working</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="initial-bid">Initial Bid Amount:</label>
+            <input type="number" id="initial-bid" name="initial-bid" min="0" required>
+        </div>
+
+        <div class="form-group">
+            <label for="bidding-start">Bidding Start Time:</label>
+            <input type="datetime-local" id="bidding-start" name="bidding-start" required>
+        </div>
+
+        <div class="form-group">
+            <label for="bidding-end">Bidding End Time:</label>
+            <input type="datetime-local" id="bidding-end" name="bidding-end" required>
+        </div>
+
+        <button type="submit">Add Gadget</button>
+    </form>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/seller.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}

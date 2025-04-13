@@ -1,0 +1,32 @@
+{% extends 'common/base.html' %}
+
+{% block title %}Bidder - View Gadgets{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bidder.css') }}">
+{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Available Gadgets</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('bidder_dashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('index') }}">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <div id="gadget-list">
+            <!-- Gadget items will be injected here by bidder.js -->
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/bidder.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'common/base.html' %}
+
+{% block title %}Online Auction System for Gadgets{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Welcome to GadgetAuction</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('seller_dashboard') }}">Seller Login</a></li>
+            <li><a href="{{ url_for('bidder_dashboard') }}">Bidder Login</a></li>
+            <li><a href="{{ url_for('admin_dashboard') }}">Admin Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="intro">
+        <h2>Buy and Sell Gadgets Easily</h2>
+        <p>Join as a Seller to post gadgets, or as a Bidder to win exciting deals through real-time bidding.</p>
+        <img src="{{ url_for('static', filename='images/default-gadget.png') }}" alt="Gadget Auction">
+    </section>
+</main>
+{% endblock %}

@@ -1,0 +1,102 @@
+/* === BIDDER DASHBOARD, VIEW GADGETS, GADGET DETAILS === */
+
+.gadget-item {
+    background-color: #222;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+    transition: transform 0.2s;
+}
+
+.gadget-item:hover {
+    transform: translateY(-4px);
+    border-color: #00bcd4;
+}
+
+.gadget-item h2 {
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+
+.gadget-item p {
+    margin: 6px 0;
+}
+
+.gadget-item a {
+    color: #00acc1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.gadget-item a:hover {
+    text-decoration: underline;
+}
+
+/* === Gadget Details === */
+
+#gadget-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.gadget-image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.gadget-info {
+    flex: 1;
+    color: #ddd;
+}
+
+.gadget-info h2 {
+    color: #00bcd4;
+}
+
+#gadget-status,
+#gadget-age,
+#gadget-description {
+    margin-top: 8px;
+}
+
+/* === Bid Form === */
+
+#bid-form {
+    margin-top: 20px;
+    background-color: #252525;
+    padding: 15px;
+    border: 1px solid #333;
+    border-radius: 6px;
+}
+
+#bid-form label {
+    color: #ccc;
+}
+
+#bid-form input {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #f0f0f0;
+}
+
+#place-bid-btn {
+    background-color: #00bcd4;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#place-bid-btn:hover {
+    background-color: #0097a7;
+}

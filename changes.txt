@@ -1,0 +1,5 @@
+reduce any auction time to 5 mins..
+remove totally tender section
+in my profile page..dont display adhaar and pan fields in front end and completely remove from backend also
+remove feedback and return product sections totally..in the footer  change contact us content to "cvr college of engineering ,mangalpalle,rangareddy,501510"
+remove google reports from admin dashboard

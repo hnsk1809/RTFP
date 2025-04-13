@@ -1,0 +1,74 @@
+/* === AUTHENTICATION PAGES === */
+
+.auth-form {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.05);
+}
+
+.auth-form h2 {
+    text-align: center;
+    color: #00bcd4;
+    margin-bottom: 25px;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+.auth-form input,
+.auth-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    color: #f0f0f0;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+    background-color: #0097a7;
+}
+
+#login-message,
+#register-message {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.auth-form .form-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.auth-form .form-links a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.auth-form .form-links a:hover {
+    text-decoration: underline;
+}

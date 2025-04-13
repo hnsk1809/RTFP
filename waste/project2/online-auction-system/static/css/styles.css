@@ -1,0 +1,142 @@
+/* === GLOBAL DARK THEME STYLES === */
+
+:root {
+    --bg-color: #121212;
+    --container-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --accent-color: #00bcd4;
+    --error-color: #ff5252;
+    --success-color: #4caf50;
+    --border-color: #333;
+    --card-bg: #242424;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* === HEADER === */
+
+header {
+    background-color: var(--card-bg);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+header h1 {
+    color: var(--accent-color);
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* === FOOTER === */
+
+footer {
+    background-color: var(--card-bg);
+    color: #aaa;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: 30px;
+}
+
+/* === FORMS === */
+
+form {
+    background-color: var(--container-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0192a3;
+}
+
+/* === NOTIFICATIONS === */
+
+.error {
+    color: var(--error-color);
+    font-weight: bold;
+}
+
+.notification,
+.success {
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+/* === GADGET CARDS === */
+
+.gadget {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.gadget img {
+    max-width: 100%;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto 10px;
+}

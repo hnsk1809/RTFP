@@ -1,0 +1,56 @@
+/* === SELLER DASHBOARD + ADD GADGET === */
+
+.seller-dashboard {
+    background-color: #1b1b1b;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.03);
+}
+
+/* Gadget Cards */
+#listed-gadgets .gadget {
+    background-color: #242424;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}
+
+#listed-gadgets .gadget h3 {
+    color: #00bcd4;
+}
+
+#listed-gadgets a {
+    color: #00acc1;
+    text-decoration: none;
+}
+
+#listed-gadgets a:hover {
+    text-decoration: underline;
+}
+
+/* Add Gadget Form Overrides (inherits base from style.css) */
+#add-gadget-form {
+    background-color: #1f1f1f;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,255,255,0.05);
+}
+
+#add-gadget-form label {
+    color: #ddd;
+}
+
+#add-gadget-form input[type="file"] {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #ccc;
+    padding: 10px;
+}
+
+/* Optional dashboard section headings */
+section h2, section h3 {
+    color: #00bcd4;
+}
+

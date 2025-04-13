@@ -1,0 +1,38 @@
+online-auction-system/
+├── css/
+│   ├── style.css       # Main stylesheet (common styles)
+│   ├── seller.css      # Styles specific to seller pages
+│   ├── bidder.css      # Styles specific to bidder pages
+│   └── admin.css       # Styles specific to admin pages
+├── js/
+│   ├── script.js       # Main JavaScript file (common functions)
+│   ├── seller.js       # JS for seller functionalities
+│   ├── bidder.js       # JS for bidder functionalities
+│   └── admin.js        # JS for admin functionalities
+├── images/             # Directory for images
+│   ├── default-gadget.png
+│   ├── laptop.jpg
+│   ├── smartphone.jpg
+│   ├── tablet.jpg
+│   └── ...           # Other gadget images
+├── pages/
+│   ├── common/         # Files common to all user types
+│   │   ├── header.html   # Header section
+│   │   ├── footer.html   # Footer section
+│   │   └── ...           # Other common elements
+│   ├── seller/
+│   │   ├── dashboard.html
+│   │   ├── add-gadget.html
+│   │   └── ...           # Other seller pages
+│   ├── bidder/
+│   │   ├── dashboard.html
+│   │   ├── view-gadgets.html
+│   │   ├── gadget-details.html
+│   │   └── ...           # Other bidder pages
+│   └── admin/
+│   │   ├── dashboard.html
+│   │   └── ...           # Other admin pages
+├── index.html          # Landing page
+├── app.py              # Flask backend application (or your PHP files)
+├── auction.db          # SQLite database file (if using SQLite)
+└── ...                 # Other project files (e.g., README.md)

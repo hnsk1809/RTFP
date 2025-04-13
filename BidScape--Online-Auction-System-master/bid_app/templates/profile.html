@@ -1,0 +1,156 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block body %}
+
+<style>
+    .profile-section {
+        padding: 30px 0;
+    }
+    
+    .profile-row {
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .profile-label {
+        font-weight: 600;
+        color: #333;
+    }
+
+    .profile-value {
+        color: #666;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #007bff;
+    }
+
+    .edit-btn {
+        width: 100%;
+        max-width: 200px;
+        padding: 12px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        margin-top: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .edit-btn:hover {
+        background: #0056b3;
+        text-decoration: none;
+        color: white;
+    }
+
+    .section-title {
+        font-size: 24px;
+        color: #333;
+        margin: 30px 0 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #007bff;
+    }
+</style>
+
+<div class="profile-section">
+    <div class="container">
+        <h1 class="page-title mb-4">{% if request.user.id == pro.user.id %}My Profile{% else %}Seller Profile{% endif %}</h1>
+
+        <div class="profile-row">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="profile-label">Full Name:</span>
+                </div>
+                <div class="col-md-6">
+                    <span class="profile-value">{{pro.user.first_name}} {{pro.user.last_name}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-row">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="profile-label">Profile Picture:</span>
+                </div>
+                <div class="col-md-6">
+                    <img src="{{pro.image.url}}" class="profile-image" alt="Profile Picture">
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-row">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="profile-label">Email:</span>
+                </div>
+                <div class="col-md-6">
+                    <span class="profile-value">{{pro.user.email}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-row">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="profile-label">Contact:</span>
+                </div>
+                <div class="col-md-6">
+                    <span class="profile-value">{{pro.contact}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-row">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="profile-label">Date of Birth:</span>
+                </div>
+                <div class="col-md-6">
+                    <span class="profile-value">{{pro.dob}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-row">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="profile-label">Address:</span>
+                </div>
+                <div class="col-md-6">
+                    <span class="profile-value">{{pro.address}}</span>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Additional Details</h2>
+
+        <div class="profile-row">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="profile-label">Account Number:</span>
+                </div>
+                <div class="col-md-6">
+                    <span class="profile-value">{{pro.account_number}}</span>
+                </div>
+            </div>
+        </div>
+
+        {% if request.user.id == pro.user.id %}
+            <div class="text-center mt-4">
+                <a href="{% url 'edit_profile' %}" class="edit-btn">Edit Profile</a>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

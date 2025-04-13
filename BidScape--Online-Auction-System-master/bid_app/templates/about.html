@@ -1,0 +1,261 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<div class="about-container">
+    <!-- Hero Section -->
+    <div class="about-hero">
+        <h1 class="about-title">About BidMedia</h1>
+        <div class="about-subtitle">Revolutionizing Digital Auctions</div>
+    </div>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="wrap">
+            <div class="section-content">
+                <h2>Our Mission</h2>
+                <p>At BidMedia, we're transforming the digital auction landscape by creating a seamless, secure, and exciting platform for buyers and sellers. Our focus on technology and user experience makes online bidding accessible to everyone.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="wrap">
+            <h2>Why Choose BidMedia</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure Bidding</h3>
+                    <p>Advanced encryption and verification systems ensure safe transactions.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>24/7 Auctions</h3>
+                    <p>Participate in auctions anytime, anywhere in the world.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Verified Sellers</h3>
+                    <p>All sellers are thoroughly vetted for your peace of mind.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Expert Support</h3>
+                    <p>Our dedicated team is always ready to assist you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="wrap">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">10K+</div>
+                    <div class="stat-label">Active Users</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5K+</div>
+                    <div class="stat-label">Successful Auctions</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Satisfaction Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="wrap">
+            <h2>Our Leadership</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="{% static 'images/team/leader1.jpg' %}" alt="Team Member">
+                    </div>
+                    <h3>John Smith</h3>
+                    <p>Chief Executive Officer</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="{% static 'images/team/leader2.jpg' %}" alt="Team Member">
+                    </div>
+                    <h3>Sarah Johnson</h3>
+                    <p>Chief Technology Officer</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="{% static 'images/team/leader3.jpg' %}" alt="Team Member">
+                    </div>
+                    <h3>Michael Chen</h3>
+                    <p>Head of Operations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="wrap">
+            <h2>Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>support@bidmedia.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>123 Auction Street, Digital City, DC 12345</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+.about-container {
+    overflow: hidden;
+}
+
+.about-hero {
+    background: linear-gradient(45deg, #E94057, #F27121);
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
+.about-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    animation: slideInDown 1s ease-out;
+}
+
+.about-subtitle {
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.section-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.features-grid, .stats-grid, .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.feature-card, .stat-card, .team-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover, .stat-card:hover, .team-card:hover {
+    transform: translateY(-10px);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #E94057;
+    margin-bottom: 10px;
+}
+
+.team-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-section {
+    background: #f8f9fa;
+}
+
+.contact-grid {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-item i {
+    font-size: 24px;
+    color: #E94057;
+    margin-right: 15px;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 3rem;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    .features-grid, .stats-grid, .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+{% endblock %}

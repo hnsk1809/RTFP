@@ -1,0 +1,30 @@
+{% extends 'common/base.html' %}
+
+{% block title %}Login - GadgetAuction{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+{% endblock %}
+
+{% block content %}
+<form id="login-form" class="auth-form">
+    <h2>Login</h2>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Login</button>
+    <div id="login-message"></div>
+
+    <div class="form-links">
+        <p>Don't have an account? <a href="{{ url_for('register_page') }}">Register here</a></p>
+    </div>
+</form>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/auth.js') }}?v=1"></script>
+{% endblock %}

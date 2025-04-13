@@ -1,0 +1,47 @@
+{% extends 'common/base.html' %}
+
+{% block title %}Gadget Details{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bidder.css') }}">
+{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Gadget Details</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('bidder_dashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('view_gadgets') }}">Back to Listings</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div id="gadget-details">
+        <div class="gadget-image">
+            <img src="{{ url_for('static', filename='images/default-gadget.png') }}" alt="Gadget Image">
+        </div>
+        <div class="gadget-info">
+            <h2 id="gadget-name">Gadget Name</h2>
+            <p id="gadget-description">Gadget Description</p>
+            <p>Current Bid: <span id="current-bid"></span></p>
+            <p>Time Left: <span id="time-left"></span></p>
+            <p id="gadget-age"></p>
+            <p id="gadget-status"></p>
+
+            <div id="bid-form">
+                <label for="bid-amount">Enter your bid:</label>
+                <input type="number" id="bid-amount" name="bid-amount" min="0">
+                <button id="place-bid-btn">Place Bid</button>
+                <p id="bid-message"></p>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/bidder.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}

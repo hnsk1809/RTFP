@@ -1,0 +1,44 @@
+{% extends 'common/base.html' %}
+
+{% block title %}Bidder Dashboard - GadgetAuction{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bidder.css') }}">
+{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Welcome, Bidder!</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('view_gadgets') }}">Browse Gadgets</a></li>
+            <li><a href="{{ url_for('index') }}">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <section>
+        <h2>Your Active Bids</h2>
+        <div id="active-bids">
+            <p>Feature in progress...</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Gadgets You've Won</h2>
+        <div id="won-gadgets">
+            <p>Feature in progress...</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Start Bidding</h2>
+        <a href="{{ url_for('view_gadgets') }}" class="button">View Available Auctions</a>
+    </section>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/bidder.js') }}"></script>
+{% endblock %}

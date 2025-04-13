@@ -1,0 +1,141 @@
+🔧 Project Title: Online Auction System for Gadgets
+💡 Objective:
+Create a full-stack web application that facilitates real-time online bidding for gadgets. The platform will feature three user interfaces: Seller, Bidder, and Admin. It should include functionalities like image uploads, gadget descriptions, time-based bidding with countdown, secure (simulated) payments, and commission handling.
+
+👥 User Roles & Interfaces:
+1. Seller Interface:
+Register/Login
+
+Dashboard to manage listings and view bid status
+
+Add Gadget Form:
+
+Upload gadget images
+
+Enter gadget name
+
+List features (text area or checklist)
+
+Enter gadget age (in months/years)
+
+Select gadget status: Working / Not Working
+
+Enter Initial Bid Amount
+
+Set Bidding Duration (start and end time)
+
+Track bidding activity in real-time
+
+Receive notifications if bidding fails (no bids received)
+
+2. Bidder Interface:
+Register/Login
+
+View all gadgets posted by sellers
+
+For each gadget:
+
+View images and detailed info
+
+See current highest bid
+
+Live countdown timer
+
+Place a new bid (must be ≥ current bid)
+
+Optional: Auto-bid feature (set maximum bid)
+
+Notification system for:
+
+Outbid alerts
+
+Bid won confirmation
+
+Payment reminders
+
+Dashboard to track:
+
+Active bids
+
+Won items
+
+Payments
+
+3. Admin Interface:
+Secure Admin Login
+
+Dashboard to monitor:
+
+All listed gadgets
+
+Bidding activity
+
+User activity (both sellers and bidders)
+
+Admin Controls:
+
+Delete irrelevant/inappropriate gadget listings
+
+Block suspicious users
+
+Track platform earnings
+
+Manage reports/feedback from users
+
+⏱️ Bidding Mechanics:
+Countdown timer for each auction visible to all users
+
+Real-time updates on current highest bid
+
+Bidding closes automatically after timer ends
+
+If no bid is placed at or above the initial amount before the end time:
+
+Bid closes automatically
+
+Seller is notified
+
+Seller is prompted to lower the initial bid amount for relisting
+
+Winning bidder is required to complete payment
+
+Platform takes 2% commission from the final amount paid by Bidder
+
+Platform also deducts 2% of the initial bid amount from Seller
+
+💻 Tech Stack:
+Frontend: HTML, CSS, JavaScript
+
+Backend: Python Flask (preferred) or PHP
+
+Database: MySQL or SQLite
+
+Hosting: Localhost or Free Cloud Hosting (e.g., Render, Vercel)
+
+💳 Payment System:
+Simulated payment gateway (demo mode)
+
+Payment logs stored in database
+
+Admin can monitor all transactions
+
+🔐 Security Features:
+Secure login and session handling
+
+Input validation and content moderation
+
+Admin ability to remove unwanted content
+
+Passwords stored securely (hashed)
+
+📊 Optional/Advanced Features (if time permits):
+Auto-bid configuration for bidders
+
+Email/SMS notifications
+
+Ratings for sellers
+
+Search and filter for gadgets
+
+Mobile responsiveness
+

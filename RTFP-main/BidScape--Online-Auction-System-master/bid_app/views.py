@@ -18,11 +18,8 @@ def home(request):
             auctionuser = AuctionUser.objects.get(user=request.user)
             if auctionuser.status == "pending":
                 messages.success(request, "Your verification is pending. Complete your additional detail and email verification. If these are already completed then try login after sometime. We are working on your detail verification. Thanks!")
-                return redirect('profile', request.user.id)
         except AuctionUser.DoesNotExist:
-            # Handle case where user doesn't have an AuctionUser profile
             messages.warning(request, "Please complete your profile setup to continue.")
-            return redirect('signup')
 
     upcoming_product = Product.objects.filter(status="upcoming")
     closed_product = Product.objects.filter(status="closed")
@@ -78,10 +75,12 @@ def Add_Product(request):
     if not request.user.is_authenticated:
         return redirect('login')
     if request.user.is_authenticated:
-        auctionuser = AuctionUser.objects.get(user=request.user)
-        if auctionuser.status == "pending":
-            messages.success(request, "Your verification is pending. complete your additional detail and email verification. if these are already completed then try login after sometime.We are working on your detail verification.Thanks!")
-            return redirect('profile', request.user.id)
+        try:
+            auctionuser = AuctionUser.objects.get(user=request.user)
+            if auctionuser.status == "pending":
+                messages.success(request, "Your verification is pending. Complete your additional detail and email verification. If these are already completed then try login after sometime. We are working on your detail verification. Thanks!")
+        except AuctionUser.DoesNotExist:
+            messages.warning(request, "Please complete your profile setup to continue.")
     cat = Category.objects.all()
     sell = AuctionUser.objects.get(user=request.user)
     if request.method == "POST":
@@ -138,10 +137,12 @@ def view_product(request):
     if not request.user.is_authenticated:
         return redirect('login')
     if request.user.is_authenticated:
-        auctionuser = AuctionUser.objects.get(user=request.user)
-        if auctionuser.status == "pending":
-            messages.success(request, "Your verification is pending. complete your additional detail and email verification. if these are already completed then try login after sometime.We are working on your detail verification.Thanks!")
-            return redirect('profile', request.user.id)
+        try:
+            auctionuser = AuctionUser.objects.get(user=request.user)
+            if auctionuser.status == "pending":
+                messages.success(request, "Your verification is pending. Complete your additional detail and email verification. If these are already completed then try login after sometime. We are working on your detail verification. Thanks!")
+        except AuctionUser.DoesNotExist:
+            messages.warning(request, "Please complete your profile setup to continue.")
     product = Product.objects.filter(user=request.user)
     return render(request, 'view_product.html', {'product': product})
 
@@ -255,20 +256,24 @@ def changeupcomingtolive(request, pid):
 
 def meetwinners(request):
     if request.user.is_authenticated:
-        auctionuser = AuctionUser.objects.get(user=request.user)
-        if auctionuser.status == "pending":
-            messages.success(request, "Your verification is pending. complete your additional detail and email verification. if these are already completed then try login after sometime.We are working on your detail verification.Thanks!")
-            return redirect('profile', request.user.id)
+        try:
+            auctionuser = AuctionUser.objects.get(user=request.user)
+            if auctionuser.status == "pending":
+                messages.success(request, "Your verification is pending. Complete your additional detail and email verification. If these are already completed then try login after sometime. We are working on your detail verification. Thanks!")
+        except AuctionUser.DoesNotExist:
+            messages.warning(request, "Please complete your profile setup to continue.")
     product = Product.objects.filter().exclude(winner=None)
     return render(request, 'meetwinners.html', {'product':product})
 
 
 def all_product(request):
     if request.user.is_authenticated:
-        auctionuser = AuctionUser.objects.get(user=request.user)
-        if auctionuser.status == "pending":
-            messages.success(request, "Your verification is pending. complete your additional detail and email verification. if these are already completed then try login after sometime.We are working on your detail verification.Thanks!")
-            return redirect('profile', request.user.id)
+        try:
+            auctionuser = AuctionUser.objects.get(user=request.user)
+            if auctionuser.status == "pending":
+                messages.success(request, "Your verification is pending. Complete your additional detail and email verification. If these are already completed then try login after sometime. We are working on your detail verification. Thanks!")
+        except AuctionUser.DoesNotExist:
+            messages.warning(request, "Please complete your profile setup to continue.")
     product = Product.objects.filter().exclude(status="pending")
     return render(request, 'HotProducts.html', {'product':product})
 

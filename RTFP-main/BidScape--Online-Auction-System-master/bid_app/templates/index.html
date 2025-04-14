@@ -269,7 +269,9 @@
     <script>
         {% if not request.user.is_authenticated %}
             {% for i in messages %}
-                alert('{{i}}');
+                {% if 'Invalid' in i %}
+                    alert('{{i}}');
+                {% endif %}
             {% endfor %}
         {% endif %}
     </script>

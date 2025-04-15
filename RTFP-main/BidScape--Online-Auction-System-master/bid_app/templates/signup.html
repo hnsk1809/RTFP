@@ -321,7 +321,7 @@
             </div>
 
             <div class="terms-checkbox">
-                <input id="chkChecked" type="checkbox" name="chkChecked" />
+                <input id="chkChecked" type="checkbox" name="chkChecked" required />
                 <label for="chkChecked">I agree to given Terms and condition of BidMedia</label>
             </div>
 
@@ -339,20 +339,6 @@
         }
         return true;
     }
-
-    // Add event listener to handle checkbox state
-    document.addEventListener('DOMContentLoaded', function() {
-        var checkbox = document.getElementById('chkChecked');
-        var label = checkbox.nextElementSibling;
-        
-        checkbox.addEventListener('change', function() {
-            if (this.checked) {
-                label.style.color = '#333';
-            } else {
-                label.style.color = '#666';
-            }
-        });
-    });
 </script>
 
 {% endblock %}
